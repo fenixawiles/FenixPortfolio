@@ -1,0 +1,462 @@
+:root {
+    --text-primary: #1a1a1a;
+    --blue-accent: #3451db;
+    --gradient-start: #3451db;
+    --gradient-end: #2c2c2c;
+    --background-light: #f5f5f5;
+    --surface-gray: #eeeeee;
+    --white: #ffffff;
+  }
+  
+  /* Reset + base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    font-family: Georgia, serif;
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--surface-gray);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--blue-accent);
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
+    color: var(--white);
+    border-radius: 8px;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    display: inline-block;
+    background-color: var(--blue-accent);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #263bb8; /* darker blue hover */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--surface-gray);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+    color: var(--text-primary);
+  }
+
+  .content-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: var(--white);
+    color: var(--text-primary);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .content-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content-section h3 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .content-section ul {
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+  }
+  
+  .content-section li {
+    margin-bottom: 0.5rem;
+  }
+
+  .content-wrapper {
+    background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
+    padding: 4rem 1rem;
+  }
+  
+  /* Already in use — just here for reference */
+  .content-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    color: var(--text-primary);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .issues-section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: var(--white);
+    color: var(--text-primary);
+  }
+  
+  .issue-card {
+    border-left: 4px solid var(--blue-accent);
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    background-color: var(--surface-gray);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .issue-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .article-entry {
+    margin-bottom: 2rem;
+  }
+  
+  .article-entry h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .article-entry .author {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  
+  .article-entry .abstract {
+    margin-bottom: 0.75rem;
+  }
+  
+  .article-link {
+    color: var(--blue-accent);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .article-link:hover {
+    text-decoration: underline;
+  }
+
+  .board-section {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: var(--white);
+    color: var(--text-primary);
+  }
+  
+  .board-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .board-section .intro-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.05rem;
+  }
+  
+  .board-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .board-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .editor-card {
+    background-color: var(--surface-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--blue-accent);
+  }
+  
+  .editor-card h3 {
+    margin-bottom: 0.25rem;
+    font-size: 1.2rem;
+  }
+  
+  .editor-role {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+  
+  .editor-bio {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  .editor-link {
+    color: var(--blue-accent);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .editor-link:hover {
+    text-decoration: underline;
+  }
+
+  .contact-section {
+    background: linear-gradient(135deg, #101010, #1e1e1e);
+    color: #f0f0f0;
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 2rem auto;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .contact-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .email-link a {
+    font-size: 1.2rem;
+    color: #4780f0;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .email-link a:hover {
+    text-decoration: underline;
+  }
+
+  .home-section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: var(--white);
+    color: var(--text-primary);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  .home-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    text-align: center;
+  }
+  
+  .home-section p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .home-section .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--blue-accent);
+    color: var(--white);
+    padding: 0.6rem 1.25rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-section .cta-button:hover {
+    background-color: #263bb8;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  
+  .logo-link {
+    display: inline-block;
+  }
+  
+  .logo-img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 0.25rem;
+  }
+
+  .header-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--surface-gray);
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo-link {
+    display: block;
+    margin-top: 0.25rem;
+  }
+  
+  .logo-img {
+    height: 60px;
+    width: auto;
+  }
+  
+  .site-title {
+    flex: 1;
+  }
+  
+  .site-title h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--text-primary);
+    text-align: left;
+  }
+  
+  .site-title nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    padding: 0;
+  }
+
+  .header-bar {
+    position: relative;
+    background-color: var(--surface-gray);
+    padding: 1.5rem 2rem 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo-left {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+  }
+  
+  .logo-left img {
+    height: 60px;
+    width: auto;
+  }
+  
+  .centered-header {
+    text-align: center;
+  }
+  
+  .centered-header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--text-primary);
+  }
+  
+  .centered-header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  
+  .centered-header nav a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .centered-header nav a:hover {
+    color: var(--blue-accent);
+    text-decoration: underline;
+  }
