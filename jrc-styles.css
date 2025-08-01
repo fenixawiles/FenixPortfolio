@@ -431,6 +431,8 @@
   
   .centered-header {
     text-align: center;
+    text-decoration: none;
+    color: inherit;
   }
   
   .centered-header h1 {
@@ -460,3 +462,4 @@
     color: var(--blue-accent);
     text-decoration: underline;
   }
+
