@@ -463,3 +463,8 @@
     text-decoration: underline;
   }
 
+.centered-header a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
