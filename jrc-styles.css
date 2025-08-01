@@ -460,7 +460,7 @@
   
   .centered-header nav a:hover {
     color: var(--blue-accent);
-    text-decoration: underline;
+    text-decoration: none;
   }
 
 .centered-header a:visited {
