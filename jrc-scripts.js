@@ -8,10 +8,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     });
   });
-  
+
+  // Mobile menu toggle
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  mobileMenuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('mobile-open');
+  });
+
   // Highlight active nav link based on current URL
   const currentPage = window.location.pathname.split("/").pop();
-  document.querySelectorAll("nav a").forEach(link => {
+  document.querySelectorAll("nav a").forEach(link =e {
     if (link.getAttribute("href") === currentPage) {
       link.classList.add("active-nav");
     }
