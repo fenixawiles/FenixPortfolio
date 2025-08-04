@@ -8,84 +8,126 @@
 </head>
 <body>
   <header>
-    <div class="header-bar">
-      <a href="jrc-index.html" class="logo-left">
-        <img src="logo.png" alt="Recursive Cognition Logo" />
-      </a>
-      <div class="centered-header">
-        <h1><a href="index.html">The Journal of Recursive Cognition</a></h1>
-        <br>
-        <div style="background-color: #f9f9f9; padding: 1rem; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 1.5rem;">
-          <h3>🚧 Site Launch Notice (August 1, 2025)</h3>
-          <p>
-            The <em>Journal of Recursive Cognition</em> is now live. We’re actively building out sections and finalizing infrastructure. Some links and features may be temporarily unavailable as we scale — thanks for your patience as we bring this vision fully online.<br>
-            Feel free to reach out with any questions: <a href="mailto:fenix@recursivecognition.org">fenix@recursivecognition.org</a>
-          </p>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-section">
+          <img src="logo.png" alt="JRC Logo" class="logo-img" />
+          <a href="index.html" class="site-title">The Journal of Recursive Cognition</a>
         </div>
-        <nav>
+        
+        <nav class="main-nav">
           <ul>
-            <li><a href="index.html">Home |</a></li>
-            <li><a href="jrc-about.html" class="active">About |</a></li>
-            <li><a href="jrc-submissions.html">Submissions |</a></li>
-            <li><a href="jrc-issues.html">Issues | </a></li>
-            <li><a href="jrc-board.html">Editorial Board |</a></li>
-            <li><a href="jrc-contact.html">Contact |</a></li>
-            <li><a href="jrc-faq.html">FAQ |</a></li>
-            <li><a href="jrc-terms.html">Terms |</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="jrc-about.html">About</a></li>
+            <li><a href="jrc-submissions.html">Submissions</a></li>
+            <li><a href="jrc-issues.html">Issues</a></li>
+            <li><a href="jrc-board.html">Editorial Board</a></li>
+            <li><a href="jrc-contact.html">Contact</a></li>
           </ul>
         </nav>
+        
+        <button class="mobile-menu-toggle">☰</button>
       </div>
     </div>
   </header>
+  
+  <!-- Launch Notice -->
+  <div class="container">
+    <div class="notice">
+      <h3>🚧 Site Launch Notice</h3>
+      <p>The <em>Journal of Recursive Cognition</em> is now live. We're actively building out sections and finalizing infrastructure. Some links and features may be temporarily unavailable as we scale — thanks for your patience as we bring this vision fully online. Feel free to reach out: <a href="mailto:fenix@recursivecognition.org">fenix@recursivecognition.org</a></p>
+    </div>
+  </div>
 
-<section class="content-wrapper">
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <h2>Rigor Without Rigidity</h2>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Rigor Without Rigidity</h1>
       <p>The Journal of Recursive Cognition publishes work at the frontier of AI-mediated inquiry, recursive dialogue, and cognitive co-authorship. We exist to legitimize recursive thinking — and the tools that make it possible.</p>
-      <br>
-      <a href="jrc-submissions.html" class="cta-button">Submit Your Work</a>
-    </section>
-      <br>
-    <!-- About Preview -->
-    <section class="content-section">
-      <h2>About the Journal</h2>
-      <p><strong>The Journal of Recursive Cognition (JRC)</strong> is an open-access, peer-reviewed platform exploring AI-assisted scholarship, recursive dialogue, and experimental methods. We publish work that questions how knowledge is made, not just what it finds.</p>
-      <br>
-      <p><a href="jrc-about.html" class="article-link">Read more about our mission →</a></p>
-    </section>
-      <br>
-    <!-- Call for Papers -->
-    <section class="content-section">
-      <h2>Accepting Submissions Soon</h2>
-      <p><strong>Theme:</strong> Foundations of Recursive Inquiry</p>
-      <p>We invite contributions that explore human-AI co-authorship, methodological reflexivity, and recursive thinking as a scholarly practice. Submissions accepted on a rolling basis.</p>
-      <br>
-      <p><a href="jrc-submissions.html" class="cta-button">View Submission Guidelines</a></p>
-    </section>
-      <br>
-    <!-- Issue Preview -->
-    <section class="content-section">
-      <h2>Coming Soon: Vol. 1, Issue 1</h2>
-      <p>Our inaugural issue will feature original contributions on recursive reflexivity, AI dialogue as method, and the epistemology of co-construction.</p>
-      <br>
-      <p><a href="jrc-issues.html" class="article-link">See Preview of Issue 1 →</a></p>
-    </section>
-      <br>
-    <!-- Get Involved -->
-    <section class="content-section">
-      <h2>Join the Editorial Movement</h2>
-      <p>We are actively building an editorial review board of early-career scholars, postgrads, and methodologists who care about ethical AI integration and experimental rigor.</p>
-      <br>
-      <p><a href="mailto:recursivecognitionjournal@gmail.com" class="article-link">Express Interest in Reviewing →</a></p>
+      <a href="jrc-submissions.html" class="btn btn-secondary btn-large">Submit Your Work</a>
+    </div>
+  </section>
 
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-body">
+              <h2>About the Journal</h2>
+              <p><strong>The Journal of Recursive Cognition (JRC)</strong> is an open-access, peer-reviewed platform exploring AI-assisted scholarship, recursive dialogue, and experimental methods. We publish work that questions how knowledge is made, not just what it finds.</p>
+              <a href="jrc-about.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-body">
+              <h2>Current Call for Papers</h2>
+              <p><strong>Theme:</strong> Foundations of Recursive Inquiry</p>
+              <p>We invite contributions that explore human-AI co-authorship, methodological reflexivity, and recursive thinking as a scholarly practice.</p>
+              <a href="jrc-submissions.html" class="btn btn-primary">View Guidelines</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What We Publish</h2>
+          <p class="section-subtitle">Exploring new frontiers in AI-assisted research and recursive methodologies</p>
+        </div>
+        
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-body">
+              <h3>Mixed Methods Research</h3>
+              <p>Projects that treat AI as a co-thinker, not just a tool, integrating computational and qualitative approaches.</p>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-body">
+              <h3>Reflexive Frameworks</h3>
+              <p>Work rooted in recursive cognition, narrative inquiry, and post-qualitative methodologies.</p>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-body">
+              <h3>Early-Career Authors</h3>
+              <p>First-time authors and researchers experimenting with new methods and interdisciplinary approaches.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Issue -->
+    <section class="section">
+      <div class="container-sm">
+        <div class="card">
+          <div class="card-body">
+            <h2>Coming Soon: Vol. 1, Issue 1</h2>
+            <p>Our inaugural issue will feature original contributions on recursive reflexivity, AI dialogue as method, and the epistemology of co-construction.</p>
+            <div style="margin-top: 2rem;">
+              <a href="jrc-issues.html" class="btn btn-primary">Preview Issue 1</a>
+              <a href="mailto:recursivecognitionjournal@gmail.com" class="btn btn-secondary" style="margin-left: 1rem;">Join as Reviewer</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-</section>
 
   <footer>
-    <p>&copy; 2025 Recursive Cognition. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Recursive Cognition. All rights reserved.</p>
+    </div>
   </footer>
   <script src="jrc-scripts.js"></script>
 </body>
