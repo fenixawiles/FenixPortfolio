@@ -1,26 +1,38 @@
 :root {
-    /* Modern Color Palette */
-    --text-primary: #1a1a1a;
-    --text-secondary: #4a5568;
-    --text-muted: #718096;
+    /* Modern Monochrome Palette */
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #999999;
     
-    /* Brand Colors */
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-    --primary-light: #dbeafe;
+    /* Brand Colors - Gradient Blacks & Grays */
+    --primary: #2a2a2a;
+    --primary-dark: #0f0f0f;
+    --primary-light: #666666;
     
     /* Neutral Colors */
     --white: #ffffff;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-800: #1f2937;
+    --black: #000000;
+    --gray-50: #1a1a1a;
+    --gray-100: #2d2d2d;
+    --gray-200: #404040;
+    --gray-300: #525252;
+    --gray-400: #666666;
+    --gray-500: #808080;
+    --gray-600: #999999;
+    --gray-700: #b3b3b3;
+    --gray-800: #cccccc;
+    --gray-900: #e6e6e6;
     
     /* Accent Colors */
-    --accent-warm: #f59e0b;
-    --success: #10b981;
+    --accent-warm: #d4af37;
+    --accent-blue: #4a90e2;
+    --blue-accent: #4a90e2;
+    --success: #4ade80;
     --danger: #ef4444;
+    
+    /* Surface Colors */
+    --surface-gray: #f5f5f5;
+    --surface-dark: #1a1a1a;
     
     /* Spacing System */
     --space-xs: 0.5rem;
@@ -116,13 +128,13 @@
   
   /* Header */
   header {
-    background-color: var(--white);
-    border-bottom: 1px solid var(--gray-200);
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+    border-bottom: 1px solid var(--gray-300);
     position: sticky;
     top: 0;
     z-index: 100;
     backdrop-filter: blur(8px);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
   }
   
   .header-content {
@@ -294,16 +306,18 @@
   
   /* Cards */
   .card {
-    background: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--gray-900) 100%);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.2s ease;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
     overflow: hidden;
+    border: 1px solid var(--gray-200);
   }
   
   .card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+    border-color: var(--gray-400);
   }
   
   .card-body {
@@ -356,30 +370,32 @@
   
   /* Notice/Alert */
   .notice {
-    background-color: var(--primary-light);
-    border: 1px solid var(--primary);
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+    border: 1px solid var(--gray-400);
     border-radius: var(--radius-md);
     padding: var(--space-lg);
     margin-bottom: var(--space-2xl);
+    box-shadow: var(--shadow-sm);
   }
   
   .notice h3 {
-    color: var(--primary-dark);
+    color: var(--text-primary);
     margin-bottom: var(--space-sm);
   }
   
   .notice p {
-    color: var(--primary-dark);
+    color: var(--text-secondary);
     margin-bottom: 0;
   }
   
   /* Footer */
   footer {
-    background-color: var(--gray-800);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--black) 100%);
     color: var(--white);
     padding: var(--space-2xl) 0;
     text-align: center;
     margin-top: var(--space-3xl);
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
   }
   
   footer p {
@@ -392,10 +408,11 @@
     max-width: 800px;
     margin: var(--space-2xl) auto;
     padding: var(--space-2xl);
-    background-color: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--gray-900) 100%);
     color: var(--text-primary);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
   }
   
   .content-section h2 {
@@ -419,7 +436,7 @@
   }
 
   .content-wrapper {
-    background: var(--gray-50);
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
     padding: var(--space-3xl) var(--space-lg);
     min-height: 100vh;
   }
@@ -456,9 +473,15 @@
     border-left: 4px solid var(--blue-accent);
     padding: 1.5rem;
     margin-bottom: 3rem;
-    background-color: var(--surface-gray);
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(135deg, var(--surface-gray) 0%, var(--gray-900) 100%);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+  }
+  
+  .issue-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
   }
   
   .issue-card h3 {
@@ -530,11 +553,19 @@
   }
   
   .editor-card {
-    background-color: var(--surface-gray);
+    background: linear-gradient(135deg, var(--surface-gray) 0%, var(--gray-900) 100%);
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
     border-left: 4px solid var(--blue-accent);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+  }
+  
+  .editor-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--gray-400);
   }
   
   .editor-card h3 {
@@ -565,41 +596,46 @@
   }
 
   .contact-section {
-    background: linear-gradient(135deg, #101010, #1e1e1e);
-    color: #f0f0f0;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--black) 100%);
+    color: var(--text-primary);
     padding: 2.5rem;
-    border-radius: 12px;
+    border-radius: var(--radius-xl);
     max-width: 700px;
     margin: 2rem auto;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--gray-400);
   }
   
   .contact-section p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    color: var(--text-secondary);
   }
   
   .email-link a {
     font-size: 1.2rem;
-    color: #4780f0;
+    color: var(--blue-accent);
     font-weight: 600;
     text-decoration: none;
+    transition: all 0.2s ease;
   }
   
   .email-link a:hover {
     text-decoration: underline;
+    color: var(--accent-warm);
   }
 
   .home-section {
     max-width: 900px;
     margin: 3rem auto;
     padding: 2.5rem;
-    background-color: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--gray-900) 100%);
     color: var(--text-primary);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
   }
   
   .home-section h2 {
@@ -619,17 +655,20 @@
   .home-section .cta-button {
     display: inline-block;
     margin-top: 1rem;
-    background-color: var(--blue-accent);
+    background: linear-gradient(135deg, var(--blue-accent) 0%, var(--primary) 100%);
     color: var(--white);
     padding: 0.6rem 1.25rem;
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     font-weight: bold;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
   }
   
   .home-section .cta-button:hover {
-    background-color: #263bb8;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
   }
 
   .header-content {
@@ -656,8 +695,8 @@
     align-items: flex-start;
     gap: 1.5rem;
     padding: 1.5rem 2rem;
-    background-color: var(--surface-gray);
-    border-bottom: 1px solid #ccc;
+    background: linear-gradient(135deg, var(--surface-gray) 0%, var(--gray-900) 100%);
+    border-bottom: 1px solid var(--gray-300);
   }
   
   .logo-link {
@@ -693,9 +732,9 @@
 
   .header-bar {
     position: relative;
-    background-color: var(--surface-gray);
+    background: linear-gradient(135deg, var(--surface-gray) 0%, var(--gray-900) 100%);
     padding: 1.5rem 2rem 0.5rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--gray-300);
   }
   
   .logo-left {
