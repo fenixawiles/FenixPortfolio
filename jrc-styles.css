@@ -152,10 +152,6 @@
     gap: var(--space-md);
   }
   
-  .logo-img {
-    height: 48px;
-    width: auto;
-  }
   
   .site-title {
     font-size: 1.5rem;
