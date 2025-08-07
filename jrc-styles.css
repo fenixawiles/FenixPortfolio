@@ -346,9 +346,10 @@
     border-radius: var(--radius-xl);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
     overflow: hidden;
     position: relative;
+    will-change: transform;
   }
   
   .card::before {
@@ -365,9 +366,9 @@
   
   .card:hover {
     background: var(--bg-glass-hover);
-    transform: translateY(-12px) scale(1.02);
+    transform: translateY(-8px);
     border-color: rgba(99, 102, 241, 0.4);
-    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.15), 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 16px 40px rgba(99, 102, 241, 0.12), 0 8px 20px rgba(0, 0, 0, 0.25);
   }
   
   .card:hover::before {
@@ -431,7 +432,8 @@
     padding: var(--space-xl);
     margin: var(--space-2xl) 0;
     box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    will-change: transform;
   }
   
   .notice:hover {
@@ -597,15 +599,15 @@
     background: linear-gradient(135deg, var(--gray-600) 0%, var(--gray-500) 100%);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     border: 1px solid var(--gray-400);
+    will-change: transform;
   }
   
   .issue-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
     border-color: var(--accent-warm);
-    background: linear-gradient(135deg, var(--gray-500) 0%, var(--gray-400) 100%);
   }
   
   .issue-card h3 {
@@ -686,15 +688,15 @@
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     border-left: 4px solid var(--accent-warm);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     border: 1px solid var(--gray-400);
+    will-change: transform;
   }
   
   .editor-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
     border-color: var(--accent-warm);
-    background: linear-gradient(135deg, var(--gray-500) 0%, var(--gray-400) 100%);
   }
   
   .editor-card h3 {
@@ -835,14 +837,14 @@
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--gray-400);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    will-change: transform;
   }
   
   .skill-category:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-color: var(--accent-warm);
-    background: linear-gradient(135deg, var(--gray-500) 0%, var(--gray-400) 100%);
   }
   
   .skill-category h4 {
@@ -909,14 +911,14 @@
     border-radius: var(--radius-lg);
     border: 1px solid var(--gray-400);
     box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    will-change: transform;
   }
   
   .research-item:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-lg);
     border-color: var(--accent-warm);
-    background: linear-gradient(135deg, var(--gray-500) 0%, var(--gray-400) 100%);
   }
   
   .research-item h4 {
